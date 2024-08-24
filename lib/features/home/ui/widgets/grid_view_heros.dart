@@ -15,7 +15,7 @@ class GirdViewHeros extends StatelessWidget {
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
         mainAxisSpacing: 8.0,
-        childAspectRatio: 0.75,
+        childAspectRatio: 0.74,
       ),
       itemCount: characters.length,
       itemBuilder: (context, index) {
