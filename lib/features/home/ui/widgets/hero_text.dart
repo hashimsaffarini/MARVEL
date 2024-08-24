@@ -4,14 +4,16 @@ import 'package:marvel_app/core/helpers/spacing.dart';
 import 'package:marvel_app/core/theming/app_colors.dart';
 
 class HeroText extends StatelessWidget {
-  const HeroText({super.key});
+  final String headerText;
+  final String subText;
+  const HeroText({super.key, required this.headerText, required this.subText});
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         Text(
-          'Héroes',
+          headerText,
           style: TextStyle(
             color: AppColors.primary,
             fontSize: 24.sp,
@@ -21,7 +23,7 @@ class HeroText extends StatelessWidget {
         ),
         const Spacer(),
         Text(
-          'Ver todo',
+          subText,
           style: TextStyle(
             color: AppColors.fontColorSecondary.withOpacity(0.9),
             fontSize: 14.sp,
