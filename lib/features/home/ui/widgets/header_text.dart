@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:marvel_app/core/helpers/spacing.dart';
 import 'package:marvel_app/core/theming/app_colors.dart';
+
 class HeaderText extends StatelessWidget {
   const HeaderText({super.key});
 
@@ -16,7 +17,7 @@ class HeaderText extends StatelessWidget {
             fontSize: 16,
           ),
         ),
-        verticalSpace(8),
+        verticalSpace(4),
         const Text(
           'Choose Your Character',
           style: TextStyle(
