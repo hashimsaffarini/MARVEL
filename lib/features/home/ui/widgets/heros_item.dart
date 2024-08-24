@@ -9,8 +9,8 @@ class HerosItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 230.h,
-      width: 140.w,
+      height: 250.h,
+      width: 150.w,
       child: Stack(
         children: [
           Positioned(
@@ -21,6 +21,14 @@ class HerosItem extends StatelessWidget {
               width: 140.w,
               clipBehavior: Clip.antiAlias,
               decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: hero.color.withOpacity(0.26),
+                    spreadRadius: 0,
+                    blurRadius: 10,
+                    offset: const Offset(7, 7),
+                  ),
+                ],
                 borderRadius: BorderRadius.circular(24),
                 image: DecorationImage(
                   image: AssetImage(hero.imgUrl),

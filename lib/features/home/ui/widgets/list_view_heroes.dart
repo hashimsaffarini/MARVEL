@@ -9,13 +9,13 @@ class ListViewHeroes extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 230.h,
+      height: 250.h,
       child: ListView.builder(
         itemCount: heros.length,
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
           return Padding(
-            padding: EdgeInsets.only(right: 16.w),
+            padding: EdgeInsets.only(right: 14.w),
             child: HerosItem(
               hero: heros[index],
             ),
