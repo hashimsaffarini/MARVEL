@@ -15,6 +15,10 @@ class MarvelApp extends StatelessWidget {
         title: 'Marvel App',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
+          scaffoldBackgroundColor: Colors.white,
+          appBarTheme: const AppBarTheme(
+            backgroundColor: Colors.white,
+          ),
           useMaterial3: true,
         ),
         initialRoute: Routes.homeScreen,
