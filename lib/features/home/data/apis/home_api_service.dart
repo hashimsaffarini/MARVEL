@@ -14,7 +14,6 @@ abstract class HomeApiService {
     @Query('apikey') required String apiKey,
     @Query('hash') required String hash,
     @Query('ts') required String timestamp,
-    @Query('limit') int limit = 100,
-    @Query('offset') int offset = 0,
+    @Query('limit') int limit = 10,
   });
 }

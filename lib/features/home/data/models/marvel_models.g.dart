@@ -8,7 +8,7 @@ part of 'marvel_models.dart';
 
 MarvelResponse _$MarvelResponseFromJson(Map<String, dynamic> json) =>
     MarvelResponse(
-      code: json['code'] as String?,
+      code: (json['code'] as num?)?.toInt(),
       status: json['status'] as String?,
       copyright: json['copyright'] as String?,
       attributionText: json['attributionText'] as String?,
@@ -31,10 +31,10 @@ Map<String, dynamic> _$MarvelResponseToJson(MarvelResponse instance) =>
     };
 
 Data _$DataFromJson(Map<String, dynamic> json) => Data(
-      offset: json['offset'] as String?,
-      limit: json['limit'] as String?,
-      total: json['total'] as String?,
-      count: json['count'] as String?,
+      offset: (json['offset'] as num?)?.toInt(),
+      limit: (json['limit'] as num?)?.toInt(),
+      total: (json['total'] as num?)?.toInt(),
+      count: (json['count'] as num?)?.toInt(),
       results: (json['results'] as List<dynamic>?)
           ?.map((e) => Results.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -49,7 +49,7 @@ Map<String, dynamic> _$DataToJson(Data instance) => <String, dynamic>{
     };
 
 Results _$ResultsFromJson(Map<String, dynamic> json) => Results(
-      id: json['id'] as String?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
       description: json['description'] as String?,
       modified: json['modified'] as String?,
@@ -109,8 +109,8 @@ Map<String, dynamic> _$ThumbnailToJson(Thumbnail instance) => <String, dynamic>{
     };
 
 Comics _$ComicsFromJson(Map<String, dynamic> json) => Comics(
-      available: json['available'] as String?,
-      returned: json['returned'] as String?,
+      available: (json['available'] as num?)?.toInt(),
+      returned: (json['returned'] as num?)?.toInt(),
       collectionURI: json['collectionURI'] as String?,
       items: (json['items'] as List<dynamic>?)
           ?.map((e) => Items.fromJson(e as Map<String, dynamic>))

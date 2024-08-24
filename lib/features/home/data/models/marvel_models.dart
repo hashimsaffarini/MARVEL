@@ -4,7 +4,7 @@ part 'marvel_models.g.dart';
 
 @JsonSerializable()
 class MarvelResponse {
-  String? code;
+  int? code;
   String? status;
   String? copyright;
   String? attributionText;
@@ -30,10 +30,10 @@ class MarvelResponse {
 
 @JsonSerializable()
 class Data {
-  String? offset;
-  String? limit;
-  String? total;
-  String? count;
+  int? offset;
+  int? limit;
+  int? total;
+  int? count;
   List<Results>? results;
 
   Data({this.offset, this.limit, this.total, this.count, this.results});
@@ -45,7 +45,7 @@ class Data {
 
 @JsonSerializable()
 class Results {
-  String? id;
+  int? id;
   String? name;
   String? description;
   String? modified;
@@ -104,8 +104,8 @@ class Thumbnail {
 
 @JsonSerializable()
 class Comics {
-  String? available;
-  String? returned;
+  int? available;
+  int? returned;
   String? collectionURI;
   List<Items>? items;
 

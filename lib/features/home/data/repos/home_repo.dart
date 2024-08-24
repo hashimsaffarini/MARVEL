@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:marvel_app/core/networking/api_error_handler.dart';
 import 'package:marvel_app/core/networking/api_result.dart';
 import 'package:marvel_app/features/home/data/apis/home_api_service.dart';
@@ -12,8 +14,7 @@ class HomeRepo {
     required String apiKey,
     required String hash,
     required String timestamp,
-    int limit = 100,
-    int offset = 0,
+    int limit = 10,
   }) async {
     try {
       final response = await _homeApiService.getAllCharacters(
@@ -21,10 +22,10 @@ class HomeRepo {
         hash: hash,
         timestamp: timestamp,
         limit: limit,
-        offset: offset,
       );
       return ApiResult.success(response);
     } catch (error) {
+      log(error.toString());
       return ApiResult.failure(ErrorHandler.handle(error));
     }
   }
