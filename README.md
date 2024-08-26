@@ -45,18 +45,11 @@ Marvel App offers the following features:
 - `Marvel API integration`: Retrieves and displays comprehensive data about Marvel characters, comics, and more using the Marvel API.
 - `Local database (Hive)`: Uses Hive to cache data locally, ensuring data persistence and enabling offline access.
 
-## Contributing
-
-We welcome contributions to Marvel App. To contribute, please follow these steps:
-
-- Fork the repository.
-- Create a new branch for your feature or bug fix: `git checkout -b feature/your-feature-name`.
-- Make your changes and commit them with descriptive commit messages.
-- Push your changes to the new branch on your forked repository.
-- Submit a pull request to the original repository.
+## App Video
+link linkedin
 
 ## App Preview
 
 |                          Home Screen                          |
 | :-----------------------------------------------------------: |
-| <img width="351" src="https://github.com/hashimsaffarini/MARVEL/blob/main/assets/images/i.png"> |
+| <img width="330" src="https://github.com/hashimsaffarini/MARVEL/blob/main/assets/images/i.png"> |
