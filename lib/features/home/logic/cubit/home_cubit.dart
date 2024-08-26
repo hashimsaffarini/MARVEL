@@ -15,7 +15,7 @@ class HomeCubit extends Cubit<HomeState> {
   final ScrollController scrollController = ScrollController();
   List<Results?> charactersList = [];
   bool isLoadingMore = false;
-  final Box<CachedResult> cacheBox = Hive.box('chacheMarvel');
+  final Box<CachedResult> cacheBox = Hive.box(ApiConstants.chacheMarvel);
 
   void getAllCharacters() async {
     emit(const HomeState.charactersLoading());

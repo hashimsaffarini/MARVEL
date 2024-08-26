@@ -8,6 +8,8 @@ class ApiConstants {
   static String hash = generateMd5('$timestamp$privateKey$publicKey');
   static String generateUrl(String endpoint) =>
       '$apiBaseUrl$endpoint?ts=$timestamp&apikey=$publicKey&hash=$hash';
+
+  static const String chacheMarvel = 'chacheMarvel';
 }
 
 class ApiErrors {
