@@ -21,11 +21,9 @@ class HomeCubit extends Cubit<HomeState> {
     emit(const HomeState.charactersLoading());
 
     if (cacheBox.isNotEmpty) {
-      // Load data from cache
       charactersList = cacheBox.values.map((e) => e.toResults()).toList();
       emit(HomeState.charactersSuccess(charactersList));
     } else {
-      // Fetch data from API
       final response = await _homeRepo.getAllCharacters(
         apiKey: ApiConstants.publicKey,
         hash: ApiConstants.hash,
@@ -38,8 +36,7 @@ class HomeCubit extends Cubit<HomeState> {
         success: (marvelResponse) {
           charactersList = marvelResponse.data?.results ?? [];
 
-          // Save fetched data to cache
-          cacheBox.clear(); // Clear previous cache
+          cacheBox.clear();
           for (var result in charactersList) {
             cacheBox.add(CachedResult.fromResults(result!));
           }
@@ -73,7 +70,6 @@ class HomeCubit extends Cubit<HomeState> {
         var newCharacters = marvelResponse.data?.results ?? [];
         charactersList.addAll(newCharacters);
 
-        // Append new data to cache
         for (var result in newCharacters) {
           cacheBox.add(CachedResult.fromResults(result));
         }
