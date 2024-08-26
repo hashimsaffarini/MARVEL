@@ -1,16 +1,62 @@
-# marvel_app
+<br />
+<div align="center">
+  <a href="#">
+    <img src="https://github.com/hashimsaffarini/MARVEL/blob/main/assets/svgs/marvel.svg" alt="Marvel Logo" width="150" height="150">
+  </a>  
 
-A new Flutter project.
+# 👋 Welcome! Marvel App README.md
 
-## Getting Started
+<div align="start">
+  
+# Marvel App 🎬 
 
-This project is a starting point for a Flutter application.
+The Marvel app delivers a comprehensive experience of the Marvel universe, utilizing Hive for caching, the Marvel API for data retrieval, and following clean architecture principles with Bloc state management.
 
-A few resources to get you started if this is your first Flutter project:
+<div align="start">
+  
+# System design
+    ├── lib
+    │   ├── core
+    │   │   ├── di
+    │   │   ├── helpers
+    │   │   ├── networking
+    │   │   ├── routing
+    │   │   ├── theming
+    │   │   ├── widgets
+    │   ├── features
+    │   │   ├── home
+    │   │   │   ├── data
+    │   │   │   │   ├── apis
+    │   │   │   │   ├── models
+    │   │   │   │   ├── repos
+    │   │   │   ├── logic
+    │   │   │   │   ├── cubit
+    │   │   │   ├── ui
+    │   │   │   │   ├── widgets
+    │   ├── main.dart
+    │   ├── marvel_app.dart
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Features
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Marvel App offers the following features:
+
+- `Clean architecture`: The app adheres to clean architecture principles, promoting separation of concerns and maintainability.
+- `Bloc state management`: Leverages Bloc for efficient state management, updating the UI in response to state changes.
+- `Marvel API integration`: Retrieves and displays comprehensive data about Marvel characters, comics, and more using the Marvel API.
+- `Local database (Hive)`: Uses Hive to cache data locally, ensuring data persistence and enabling offline access.
+
+## Contributing
+
+We welcome contributions to Marvel App. To contribute, please follow these steps:
+
+- Fork the repository.
+- Create a new branch for your feature or bug fix: `git checkout -b feature/your-feature-name`.
+- Make your changes and commit them with descriptive commit messages.
+- Push your changes to the new branch on your forked repository.
+- Submit a pull request to the original repository.
+
+## App Preview
+
+|                          Home Screen                          |
+| :-----------------------------------------------------------: |
+| <img width="351" src="https://github.com/hashimsaffarini/MARVEL/blob/main/assets/images/i.png"> |
