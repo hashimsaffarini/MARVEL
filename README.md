@@ -46,7 +46,7 @@ Marvel App offers the following features:
 - `Local database (Hive)`: Uses Hive to cache data locally, ensuring data persistence and enabling offline access.
 
 ## App Video
-link linkedin
+https://www.linkedin.com/posts/hashim-saffarini_flutter-dart-mobile-activity-7233776683923722240-0I4k?utm_source=share&utm_medium=member_ios
 
 ## App Preview
 
