@@ -1,7 +1,9 @@
 import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:hive/hive.dart';
 import 'package:marvel_app/core/networking/api_constants.dart';
+import 'package:marvel_app/features/home/data/models/cache_model.dart';
 import 'package:marvel_app/features/home/data/models/marvel_models.dart';
 import 'package:marvel_app/features/home/data/repos/home_repo.dart';
 import 'home_state.dart';
@@ -9,31 +11,47 @@ import 'home_state.dart';
 class HomeCubit extends Cubit<HomeState> {
   final HomeRepo _homeRepo;
   HomeCubit(this._homeRepo) : super(const HomeState.initial());
-  ScrollController scrollController = ScrollController();
+
+  final ScrollController scrollController = ScrollController();
   List<Results?> charactersList = [];
   bool isLoadingMore = false;
+  final Box<CachedResult> cacheBox = Hive.box('chacheMarvel');
 
   void getAllCharacters() async {
     emit(const HomeState.charactersLoading());
 
-    final response = await _homeRepo.getAllCharacters(
-      apiKey: ApiConstants.publicKey,
-      hash: ApiConstants.hash,
-      timestamp: ApiConstants.timestamp.toString(),
-      limit: 10,
-      offset: 0,
-    );
+    if (cacheBox.isNotEmpty) {
+      // Load data from cache
+      charactersList = cacheBox.values.map((e) => e.toResults()).toList();
+      emit(HomeState.charactersSuccess(charactersList));
+    } else {
+      // Fetch data from API
+      final response = await _homeRepo.getAllCharacters(
+        apiKey: ApiConstants.publicKey,
+        hash: ApiConstants.hash,
+        timestamp: ApiConstants.timestamp.toString(),
+        limit: 10,
+        offset: 0,
+      );
 
-    response.when(
-      success: (marvelResponse) {
-        charactersList = marvelResponse.data?.results ?? [];
-        emit(HomeState.charactersSuccess(charactersList));
-      },
-      failure: (errorHandler) {
-        log(errorHandler.apiErrorModel.toString());
-        emit(HomeState.charactersError(errorHandler));
-      },
-    );
+      response.when(
+        success: (marvelResponse) {
+          charactersList = marvelResponse.data?.results ?? [];
+
+          // Save fetched data to cache
+          cacheBox.clear(); // Clear previous cache
+          for (var result in charactersList) {
+            cacheBox.add(CachedResult.fromResults(result!));
+          }
+
+          emit(HomeState.charactersSuccess(charactersList));
+        },
+        failure: (errorHandler) {
+          log(errorHandler.apiErrorModel.toString());
+          emit(HomeState.charactersError(errorHandler));
+        },
+      );
+    }
   }
 
   void loadMoreCharacters() async {
@@ -52,7 +70,14 @@ class HomeCubit extends Cubit<HomeState> {
 
     response.when(
       success: (marvelResponse) {
-        charactersList.addAll(marvelResponse.data?.results ?? []);
+        var newCharacters = marvelResponse.data?.results ?? [];
+        charactersList.addAll(newCharacters);
+
+        // Append new data to cache
+        for (var result in newCharacters) {
+          cacheBox.add(CachedResult.fromResults(result));
+        }
+
         emit(HomeState.paginationSuccess(charactersList));
       },
       failure: (errorHandler) {

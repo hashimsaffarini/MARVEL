@@ -6,29 +6,29 @@ part of 'cache_model.dart';
 // TypeAdapterGenerator
 // **************************************************************************
 
-class ResultsAdapter extends TypeAdapter<Results> {
+class CachedResultAdapter extends TypeAdapter<CachedResult> {
   @override
-  final int typeId = 1;
+  final int typeId = 0;
 
   @override
-  Results read(BinaryReader reader) {
+  CachedResult read(BinaryReader reader) {
     final numOfFields = reader.readByte();
     final fields = <int, dynamic>{
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
-    return Results(
+    return CachedResult(
       id: fields[0] as int?,
       name: fields[1] as String?,
       description: fields[2] as String?,
       modified: fields[3] as String?,
       resourceURI: fields[4] as String?,
-      thumbnail: fields[5] as Thumbnail?,
-      urls: (fields[6] as List?)?.cast<Urls>(),
+      thumbnail: fields[5] as CachedThumbnail?,
+      comics: fields[6] as CachedComics?,
     );
   }
 
   @override
-  void write(BinaryWriter writer, Results obj) {
+  void write(BinaryWriter writer, CachedResult obj) {
     writer
       ..writeByte(7)
       ..writeByte(0)
@@ -44,7 +44,7 @@ class ResultsAdapter extends TypeAdapter<Results> {
       ..writeByte(5)
       ..write(obj.thumbnail)
       ..writeByte(6)
-      ..write(obj.urls);
+      ..write(obj.comics);
   }
 
   @override
@@ -53,29 +53,29 @@ class ResultsAdapter extends TypeAdapter<Results> {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is ResultsAdapter &&
+      other is CachedResultAdapter &&
           runtimeType == other.runtimeType &&
           typeId == other.typeId;
 }
 
-class ThumbnailAdapter extends TypeAdapter<Thumbnail> {
+class CachedThumbnailAdapter extends TypeAdapter<CachedThumbnail> {
   @override
-  final int typeId = 2;
+  final int typeId = 1;
 
   @override
-  Thumbnail read(BinaryReader reader) {
+  CachedThumbnail read(BinaryReader reader) {
     final numOfFields = reader.readByte();
     final fields = <int, dynamic>{
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
-    return Thumbnail(
+    return CachedThumbnail(
       path: fields[0] as String?,
       extension: fields[1] as String?,
     );
   }
 
   @override
-  void write(BinaryWriter writer, Thumbnail obj) {
+  void write(BinaryWriter writer, CachedThumbnail obj) {
     writer
       ..writeByte(2)
       ..writeByte(0)
@@ -90,35 +90,38 @@ class ThumbnailAdapter extends TypeAdapter<Thumbnail> {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is ThumbnailAdapter &&
+      other is CachedThumbnailAdapter &&
           runtimeType == other.runtimeType &&
           typeId == other.typeId;
 }
 
-class UrlsAdapter extends TypeAdapter<Urls> {
+class CachedComicsAdapter extends TypeAdapter<CachedComics> {
   @override
-  final int typeId = 3;
+  final int typeId = 2;
 
   @override
-  Urls read(BinaryReader reader) {
+  CachedComics read(BinaryReader reader) {
     final numOfFields = reader.readByte();
     final fields = <int, dynamic>{
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
-    return Urls(
-      type: fields[0] as String?,
-      url: fields[1] as String?,
+    return CachedComics(
+      available: fields[0] as int?,
+      returned: fields[1] as int?,
+      collectionURI: fields[2] as String?,
     );
   }
 
   @override
-  void write(BinaryWriter writer, Urls obj) {
+  void write(BinaryWriter writer, CachedComics obj) {
     writer
-      ..writeByte(2)
+      ..writeByte(3)
       ..writeByte(0)
-      ..write(obj.type)
+      ..write(obj.available)
       ..writeByte(1)
-      ..write(obj.url);
+      ..write(obj.returned)
+      ..writeByte(2)
+      ..write(obj.collectionURI);
   }
 
   @override
@@ -127,7 +130,7 @@ class UrlsAdapter extends TypeAdapter<Urls> {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is UrlsAdapter &&
+      other is CachedComicsAdapter &&
           runtimeType == other.runtimeType &&
           typeId == other.typeId;
 }
