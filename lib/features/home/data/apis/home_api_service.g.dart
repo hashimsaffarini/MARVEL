@@ -29,6 +29,7 @@ class _HomeApiService implements HomeApiService {
     required String hash,
     required String timestamp,
     int limit = 10,
+    int offset = 0,
   }) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
@@ -36,6 +37,7 @@ class _HomeApiService implements HomeApiService {
       r'hash': hash,
       r'ts': timestamp,
       r'limit': limit,
+      r'offset': offset,
     };
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;

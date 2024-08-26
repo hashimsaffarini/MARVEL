@@ -15,6 +15,8 @@ class HomeRepo {
     required String hash,
     required String timestamp,
     int limit = 10,
+    int offset = 0,
+  
   }) async {
     try {
       final response = await _homeApiService.getAllCharacters(
@@ -22,6 +24,7 @@ class HomeRepo {
         hash: hash,
         timestamp: timestamp,
         limit: limit,
+        offset : offset,
       );
       return ApiResult.success(response);
     } catch (error) {

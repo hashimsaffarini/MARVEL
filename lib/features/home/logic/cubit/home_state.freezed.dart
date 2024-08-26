@@ -22,6 +22,8 @@ mixin _$HomeState {
     required TResult Function() charactersLoading,
     required TResult Function(List<Results?>? charactersList) charactersSuccess,
     required TResult Function(ErrorHandler errorHandler) charactersError,
+    required TResult Function() paginationLoading,
+    required TResult Function(List<Results?>? charactersList) paginationSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +32,8 @@ mixin _$HomeState {
     TResult? Function()? charactersLoading,
     TResult? Function(List<Results?>? charactersList)? charactersSuccess,
     TResult? Function(ErrorHandler errorHandler)? charactersError,
+    TResult? Function()? paginationLoading,
+    TResult? Function(List<Results?>? charactersList)? paginationSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +42,8 @@ mixin _$HomeState {
     TResult Function()? charactersLoading,
     TResult Function(List<Results?>? charactersList)? charactersSuccess,
     TResult Function(ErrorHandler errorHandler)? charactersError,
+    TResult Function()? paginationLoading,
+    TResult Function(List<Results?>? charactersList)? paginationSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +53,8 @@ mixin _$HomeState {
     required TResult Function(CharactersLoading value) charactersLoading,
     required TResult Function(CharactersSuccess value) charactersSuccess,
     required TResult Function(CharactersError value) charactersError,
+    required TResult Function(PaginationLoading value) paginationLoading,
+    required TResult Function(PaginationSuccess value) paginationSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +63,8 @@ mixin _$HomeState {
     TResult? Function(CharactersLoading value)? charactersLoading,
     TResult? Function(CharactersSuccess value)? charactersSuccess,
     TResult? Function(CharactersError value)? charactersError,
+    TResult? Function(PaginationLoading value)? paginationLoading,
+    TResult? Function(PaginationSuccess value)? paginationSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +73,8 @@ mixin _$HomeState {
     TResult Function(CharactersLoading value)? charactersLoading,
     TResult Function(CharactersSuccess value)? charactersSuccess,
     TResult Function(CharactersError value)? charactersError,
+    TResult Function(PaginationLoading value)? paginationLoading,
+    TResult Function(PaginationSuccess value)? paginationSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -133,6 +145,8 @@ class _$InitialImpl implements _Initial {
     required TResult Function() charactersLoading,
     required TResult Function(List<Results?>? charactersList) charactersSuccess,
     required TResult Function(ErrorHandler errorHandler) charactersError,
+    required TResult Function() paginationLoading,
+    required TResult Function(List<Results?>? charactersList) paginationSuccess,
   }) {
     return initial();
   }
@@ -144,6 +158,8 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? charactersLoading,
     TResult? Function(List<Results?>? charactersList)? charactersSuccess,
     TResult? Function(ErrorHandler errorHandler)? charactersError,
+    TResult? Function()? paginationLoading,
+    TResult? Function(List<Results?>? charactersList)? paginationSuccess,
   }) {
     return initial?.call();
   }
@@ -155,6 +171,8 @@ class _$InitialImpl implements _Initial {
     TResult Function()? charactersLoading,
     TResult Function(List<Results?>? charactersList)? charactersSuccess,
     TResult Function(ErrorHandler errorHandler)? charactersError,
+    TResult Function()? paginationLoading,
+    TResult Function(List<Results?>? charactersList)? paginationSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -170,6 +188,8 @@ class _$InitialImpl implements _Initial {
     required TResult Function(CharactersLoading value) charactersLoading,
     required TResult Function(CharactersSuccess value) charactersSuccess,
     required TResult Function(CharactersError value) charactersError,
+    required TResult Function(PaginationLoading value) paginationLoading,
+    required TResult Function(PaginationSuccess value) paginationSuccess,
   }) {
     return initial(this);
   }
@@ -181,6 +201,8 @@ class _$InitialImpl implements _Initial {
     TResult? Function(CharactersLoading value)? charactersLoading,
     TResult? Function(CharactersSuccess value)? charactersSuccess,
     TResult? Function(CharactersError value)? charactersError,
+    TResult? Function(PaginationLoading value)? paginationLoading,
+    TResult? Function(PaginationSuccess value)? paginationSuccess,
   }) {
     return initial?.call(this);
   }
@@ -192,6 +214,8 @@ class _$InitialImpl implements _Initial {
     TResult Function(CharactersLoading value)? charactersLoading,
     TResult Function(CharactersSuccess value)? charactersSuccess,
     TResult Function(CharactersError value)? charactersError,
+    TResult Function(PaginationLoading value)? paginationLoading,
+    TResult Function(PaginationSuccess value)? paginationSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -250,6 +274,8 @@ class _$CharactersLoadingImpl implements CharactersLoading {
     required TResult Function() charactersLoading,
     required TResult Function(List<Results?>? charactersList) charactersSuccess,
     required TResult Function(ErrorHandler errorHandler) charactersError,
+    required TResult Function() paginationLoading,
+    required TResult Function(List<Results?>? charactersList) paginationSuccess,
   }) {
     return charactersLoading();
   }
@@ -261,6 +287,8 @@ class _$CharactersLoadingImpl implements CharactersLoading {
     TResult? Function()? charactersLoading,
     TResult? Function(List<Results?>? charactersList)? charactersSuccess,
     TResult? Function(ErrorHandler errorHandler)? charactersError,
+    TResult? Function()? paginationLoading,
+    TResult? Function(List<Results?>? charactersList)? paginationSuccess,
   }) {
     return charactersLoading?.call();
   }
@@ -272,6 +300,8 @@ class _$CharactersLoadingImpl implements CharactersLoading {
     TResult Function()? charactersLoading,
     TResult Function(List<Results?>? charactersList)? charactersSuccess,
     TResult Function(ErrorHandler errorHandler)? charactersError,
+    TResult Function()? paginationLoading,
+    TResult Function(List<Results?>? charactersList)? paginationSuccess,
     required TResult orElse(),
   }) {
     if (charactersLoading != null) {
@@ -287,6 +317,8 @@ class _$CharactersLoadingImpl implements CharactersLoading {
     required TResult Function(CharactersLoading value) charactersLoading,
     required TResult Function(CharactersSuccess value) charactersSuccess,
     required TResult Function(CharactersError value) charactersError,
+    required TResult Function(PaginationLoading value) paginationLoading,
+    required TResult Function(PaginationSuccess value) paginationSuccess,
   }) {
     return charactersLoading(this);
   }
@@ -298,6 +330,8 @@ class _$CharactersLoadingImpl implements CharactersLoading {
     TResult? Function(CharactersLoading value)? charactersLoading,
     TResult? Function(CharactersSuccess value)? charactersSuccess,
     TResult? Function(CharactersError value)? charactersError,
+    TResult? Function(PaginationLoading value)? paginationLoading,
+    TResult? Function(PaginationSuccess value)? paginationSuccess,
   }) {
     return charactersLoading?.call(this);
   }
@@ -309,6 +343,8 @@ class _$CharactersLoadingImpl implements CharactersLoading {
     TResult Function(CharactersLoading value)? charactersLoading,
     TResult Function(CharactersSuccess value)? charactersSuccess,
     TResult Function(CharactersError value)? charactersError,
+    TResult Function(PaginationLoading value)? paginationLoading,
+    TResult Function(PaginationSuccess value)? paginationSuccess,
     required TResult orElse(),
   }) {
     if (charactersLoading != null) {
@@ -405,6 +441,8 @@ class _$CharactersSuccessImpl implements CharactersSuccess {
     required TResult Function() charactersLoading,
     required TResult Function(List<Results?>? charactersList) charactersSuccess,
     required TResult Function(ErrorHandler errorHandler) charactersError,
+    required TResult Function() paginationLoading,
+    required TResult Function(List<Results?>? charactersList) paginationSuccess,
   }) {
     return charactersSuccess(charactersList);
   }
@@ -416,6 +454,8 @@ class _$CharactersSuccessImpl implements CharactersSuccess {
     TResult? Function()? charactersLoading,
     TResult? Function(List<Results?>? charactersList)? charactersSuccess,
     TResult? Function(ErrorHandler errorHandler)? charactersError,
+    TResult? Function()? paginationLoading,
+    TResult? Function(List<Results?>? charactersList)? paginationSuccess,
   }) {
     return charactersSuccess?.call(charactersList);
   }
@@ -427,6 +467,8 @@ class _$CharactersSuccessImpl implements CharactersSuccess {
     TResult Function()? charactersLoading,
     TResult Function(List<Results?>? charactersList)? charactersSuccess,
     TResult Function(ErrorHandler errorHandler)? charactersError,
+    TResult Function()? paginationLoading,
+    TResult Function(List<Results?>? charactersList)? paginationSuccess,
     required TResult orElse(),
   }) {
     if (charactersSuccess != null) {
@@ -442,6 +484,8 @@ class _$CharactersSuccessImpl implements CharactersSuccess {
     required TResult Function(CharactersLoading value) charactersLoading,
     required TResult Function(CharactersSuccess value) charactersSuccess,
     required TResult Function(CharactersError value) charactersError,
+    required TResult Function(PaginationLoading value) paginationLoading,
+    required TResult Function(PaginationSuccess value) paginationSuccess,
   }) {
     return charactersSuccess(this);
   }
@@ -453,6 +497,8 @@ class _$CharactersSuccessImpl implements CharactersSuccess {
     TResult? Function(CharactersLoading value)? charactersLoading,
     TResult? Function(CharactersSuccess value)? charactersSuccess,
     TResult? Function(CharactersError value)? charactersError,
+    TResult? Function(PaginationLoading value)? paginationLoading,
+    TResult? Function(PaginationSuccess value)? paginationSuccess,
   }) {
     return charactersSuccess?.call(this);
   }
@@ -464,6 +510,8 @@ class _$CharactersSuccessImpl implements CharactersSuccess {
     TResult Function(CharactersLoading value)? charactersLoading,
     TResult Function(CharactersSuccess value)? charactersSuccess,
     TResult Function(CharactersError value)? charactersError,
+    TResult Function(PaginationLoading value)? paginationLoading,
+    TResult Function(PaginationSuccess value)? paginationSuccess,
     required TResult orElse(),
   }) {
     if (charactersSuccess != null) {
@@ -560,6 +608,8 @@ class _$CharactersErrorImpl implements CharactersError {
     required TResult Function() charactersLoading,
     required TResult Function(List<Results?>? charactersList) charactersSuccess,
     required TResult Function(ErrorHandler errorHandler) charactersError,
+    required TResult Function() paginationLoading,
+    required TResult Function(List<Results?>? charactersList) paginationSuccess,
   }) {
     return charactersError(errorHandler);
   }
@@ -571,6 +621,8 @@ class _$CharactersErrorImpl implements CharactersError {
     TResult? Function()? charactersLoading,
     TResult? Function(List<Results?>? charactersList)? charactersSuccess,
     TResult? Function(ErrorHandler errorHandler)? charactersError,
+    TResult? Function()? paginationLoading,
+    TResult? Function(List<Results?>? charactersList)? paginationSuccess,
   }) {
     return charactersError?.call(errorHandler);
   }
@@ -582,6 +634,8 @@ class _$CharactersErrorImpl implements CharactersError {
     TResult Function()? charactersLoading,
     TResult Function(List<Results?>? charactersList)? charactersSuccess,
     TResult Function(ErrorHandler errorHandler)? charactersError,
+    TResult Function()? paginationLoading,
+    TResult Function(List<Results?>? charactersList)? paginationSuccess,
     required TResult orElse(),
   }) {
     if (charactersError != null) {
@@ -597,6 +651,8 @@ class _$CharactersErrorImpl implements CharactersError {
     required TResult Function(CharactersLoading value) charactersLoading,
     required TResult Function(CharactersSuccess value) charactersSuccess,
     required TResult Function(CharactersError value) charactersError,
+    required TResult Function(PaginationLoading value) paginationLoading,
+    required TResult Function(PaginationSuccess value) paginationSuccess,
   }) {
     return charactersError(this);
   }
@@ -608,6 +664,8 @@ class _$CharactersErrorImpl implements CharactersError {
     TResult? Function(CharactersLoading value)? charactersLoading,
     TResult? Function(CharactersSuccess value)? charactersSuccess,
     TResult? Function(CharactersError value)? charactersError,
+    TResult? Function(PaginationLoading value)? paginationLoading,
+    TResult? Function(PaginationSuccess value)? paginationSuccess,
   }) {
     return charactersError?.call(this);
   }
@@ -619,6 +677,8 @@ class _$CharactersErrorImpl implements CharactersError {
     TResult Function(CharactersLoading value)? charactersLoading,
     TResult Function(CharactersSuccess value)? charactersSuccess,
     TResult Function(CharactersError value)? charactersError,
+    TResult Function(PaginationLoading value)? paginationLoading,
+    TResult Function(PaginationSuccess value)? paginationSuccess,
     required TResult orElse(),
   }) {
     if (charactersError != null) {
@@ -638,5 +698,310 @@ abstract class CharactersError implements HomeState {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CharactersErrorImplCopyWith<_$CharactersErrorImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$PaginationLoadingImplCopyWith<$Res> {
+  factory _$$PaginationLoadingImplCopyWith(_$PaginationLoadingImpl value,
+          $Res Function(_$PaginationLoadingImpl) then) =
+      __$$PaginationLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$PaginationLoadingImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$PaginationLoadingImpl>
+    implements _$$PaginationLoadingImplCopyWith<$Res> {
+  __$$PaginationLoadingImplCopyWithImpl(_$PaginationLoadingImpl _value,
+      $Res Function(_$PaginationLoadingImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$PaginationLoadingImpl implements PaginationLoading {
+  const _$PaginationLoadingImpl();
+
+  @override
+  String toString() {
+    return 'HomeState.paginationLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$PaginationLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() charactersLoading,
+    required TResult Function(List<Results?>? charactersList) charactersSuccess,
+    required TResult Function(ErrorHandler errorHandler) charactersError,
+    required TResult Function() paginationLoading,
+    required TResult Function(List<Results?>? charactersList) paginationSuccess,
+  }) {
+    return paginationLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? charactersLoading,
+    TResult? Function(List<Results?>? charactersList)? charactersSuccess,
+    TResult? Function(ErrorHandler errorHandler)? charactersError,
+    TResult? Function()? paginationLoading,
+    TResult? Function(List<Results?>? charactersList)? paginationSuccess,
+  }) {
+    return paginationLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? charactersLoading,
+    TResult Function(List<Results?>? charactersList)? charactersSuccess,
+    TResult Function(ErrorHandler errorHandler)? charactersError,
+    TResult Function()? paginationLoading,
+    TResult Function(List<Results?>? charactersList)? paginationSuccess,
+    required TResult orElse(),
+  }) {
+    if (paginationLoading != null) {
+      return paginationLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(CharactersLoading value) charactersLoading,
+    required TResult Function(CharactersSuccess value) charactersSuccess,
+    required TResult Function(CharactersError value) charactersError,
+    required TResult Function(PaginationLoading value) paginationLoading,
+    required TResult Function(PaginationSuccess value) paginationSuccess,
+  }) {
+    return paginationLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(CharactersLoading value)? charactersLoading,
+    TResult? Function(CharactersSuccess value)? charactersSuccess,
+    TResult? Function(CharactersError value)? charactersError,
+    TResult? Function(PaginationLoading value)? paginationLoading,
+    TResult? Function(PaginationSuccess value)? paginationSuccess,
+  }) {
+    return paginationLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(CharactersLoading value)? charactersLoading,
+    TResult Function(CharactersSuccess value)? charactersSuccess,
+    TResult Function(CharactersError value)? charactersError,
+    TResult Function(PaginationLoading value)? paginationLoading,
+    TResult Function(PaginationSuccess value)? paginationSuccess,
+    required TResult orElse(),
+  }) {
+    if (paginationLoading != null) {
+      return paginationLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class PaginationLoading implements HomeState {
+  const factory PaginationLoading() = _$PaginationLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$PaginationSuccessImplCopyWith<$Res> {
+  factory _$$PaginationSuccessImplCopyWith(_$PaginationSuccessImpl value,
+          $Res Function(_$PaginationSuccessImpl) then) =
+      __$$PaginationSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<Results?>? charactersList});
+}
+
+/// @nodoc
+class __$$PaginationSuccessImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$PaginationSuccessImpl>
+    implements _$$PaginationSuccessImplCopyWith<$Res> {
+  __$$PaginationSuccessImplCopyWithImpl(_$PaginationSuccessImpl _value,
+      $Res Function(_$PaginationSuccessImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? charactersList = freezed,
+  }) {
+    return _then(_$PaginationSuccessImpl(
+      freezed == charactersList
+          ? _value._charactersList
+          : charactersList // ignore: cast_nullable_to_non_nullable
+              as List<Results?>?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$PaginationSuccessImpl implements PaginationSuccess {
+  const _$PaginationSuccessImpl(final List<Results?>? charactersList)
+      : _charactersList = charactersList;
+
+  final List<Results?>? _charactersList;
+  @override
+  List<Results?>? get charactersList {
+    final value = _charactersList;
+    if (value == null) return null;
+    if (_charactersList is EqualUnmodifiableListView) return _charactersList;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  String toString() {
+    return 'HomeState.paginationSuccess(charactersList: $charactersList)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PaginationSuccessImpl &&
+            const DeepCollectionEquality()
+                .equals(other._charactersList, _charactersList));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_charactersList));
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PaginationSuccessImplCopyWith<_$PaginationSuccessImpl> get copyWith =>
+      __$$PaginationSuccessImplCopyWithImpl<_$PaginationSuccessImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() charactersLoading,
+    required TResult Function(List<Results?>? charactersList) charactersSuccess,
+    required TResult Function(ErrorHandler errorHandler) charactersError,
+    required TResult Function() paginationLoading,
+    required TResult Function(List<Results?>? charactersList) paginationSuccess,
+  }) {
+    return paginationSuccess(charactersList);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? charactersLoading,
+    TResult? Function(List<Results?>? charactersList)? charactersSuccess,
+    TResult? Function(ErrorHandler errorHandler)? charactersError,
+    TResult? Function()? paginationLoading,
+    TResult? Function(List<Results?>? charactersList)? paginationSuccess,
+  }) {
+    return paginationSuccess?.call(charactersList);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? charactersLoading,
+    TResult Function(List<Results?>? charactersList)? charactersSuccess,
+    TResult Function(ErrorHandler errorHandler)? charactersError,
+    TResult Function()? paginationLoading,
+    TResult Function(List<Results?>? charactersList)? paginationSuccess,
+    required TResult orElse(),
+  }) {
+    if (paginationSuccess != null) {
+      return paginationSuccess(charactersList);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(CharactersLoading value) charactersLoading,
+    required TResult Function(CharactersSuccess value) charactersSuccess,
+    required TResult Function(CharactersError value) charactersError,
+    required TResult Function(PaginationLoading value) paginationLoading,
+    required TResult Function(PaginationSuccess value) paginationSuccess,
+  }) {
+    return paginationSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(CharactersLoading value)? charactersLoading,
+    TResult? Function(CharactersSuccess value)? charactersSuccess,
+    TResult? Function(CharactersError value)? charactersError,
+    TResult? Function(PaginationLoading value)? paginationLoading,
+    TResult? Function(PaginationSuccess value)? paginationSuccess,
+  }) {
+    return paginationSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(CharactersLoading value)? charactersLoading,
+    TResult Function(CharactersSuccess value)? charactersSuccess,
+    TResult Function(CharactersError value)? charactersError,
+    TResult Function(PaginationLoading value)? paginationLoading,
+    TResult Function(PaginationSuccess value)? paginationSuccess,
+    required TResult orElse(),
+  }) {
+    if (paginationSuccess != null) {
+      return paginationSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class PaginationSuccess implements HomeState {
+  const factory PaginationSuccess(final List<Results?>? charactersList) =
+      _$PaginationSuccessImpl;
+
+  List<Results?>? get charactersList;
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$PaginationSuccessImplCopyWith<_$PaginationSuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

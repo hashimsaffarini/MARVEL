@@ -13,4 +13,9 @@ class HomeState with _$HomeState {
   const factory HomeState.charactersSuccess(List<Results?>? charactersList) = CharactersSuccess;
 
   const factory HomeState.charactersError(ErrorHandler errorHandler) = CharactersError;
+
+  const factory HomeState.paginationLoading() = PaginationLoading;
+
+  const factory HomeState.paginationSuccess(List<Results?>? charactersList) = PaginationSuccess;
+
 }

@@ -9,21 +9,25 @@ class GirdViewHeros extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GridView.builder(
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
-        mainAxisSpacing: 8.0,
-        childAspectRatio: 0.74,
-      ),
-      itemCount: characters.length,
-      itemBuilder: (context, index) {
-        return Padding(
-          padding: EdgeInsets.only(right: 24.w),
-          child: CharacterGridItem(character: characters[index]!),
-        );
-      },
+    return Column(
+      children: [
+        GridView.builder(
+          shrinkWrap: true,
+          physics: const NeverScrollableScrollPhysics(),
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+            mainAxisSpacing: 8.0,
+            childAspectRatio: 0.74,
+          ),
+          itemCount: characters.length,
+          itemBuilder: (context, index) {
+            return Padding(
+              padding: EdgeInsets.only(right: 24.w),
+              child: CharacterGridItem(character: characters[index]!),
+            );
+          },
+        ),
+      ],
     );
   }
 }
