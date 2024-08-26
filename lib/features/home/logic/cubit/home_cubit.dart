@@ -35,8 +35,6 @@ class HomeCubit extends Cubit<HomeState> {
       response.when(
         success: (marvelResponse) {
           charactersList = marvelResponse.data?.results ?? [];
-
-          cacheBox.clear();
           for (var result in charactersList) {
             cacheBox.add(CachedResult.fromResults(result!));
           }
